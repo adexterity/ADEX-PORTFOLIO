@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* NAV BAR */
+.nav-bar {
+  background: blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 6rem;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar .nav-list .icon {
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.hamburger-list {
+  margin-bottom: 4rem;
+}
+
+.home-list,
+.envelope-list,
+.book-list {
+  margin-bottom: 2rem;
+}
+
+/* NAVBAR ENDS */
+
+/* SEARCH BAR AND TABLE */
+
+.contact-container {
+  max-width: 70rem;
+  margin-top: 50px;
+}
+.search-add {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0px;
+}
+.search-field {
+  padding: 10px 30px 10px 10px;
+  background: #eeecec;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  margin-right: 0.5rem;
+  flex-grow: 1;
+}
+.add-contact-btn {
+  padding: 1rem 3rem;
+  background-color: #2185d0;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.table {
+  border: none;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.thead {
+  background-color: #eeecec;
+  font-size: 1.8rem;
+  padding: 2.5rem 2.5rem;
+}
+th {
+  padding: 1rem 0.2rem;
+  text-align: left;
+}
+
+.table tbody tr:hover {
+  background-color: #eeecec;
+}
+
+.table tbody tr td i {
+  color: blue;
+  font-size: 2rem;
+  margin-top: 0.7rem;
+}
+.table tbody tr td i:hover {
+  color: red;
+}
+
+.table tbody .image {
+  position: static;
+}
+/* ADD CONTACT MODAL */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-modal {
+  position: absolute;
+  /*  top: 50%;
+  left: 50%; */
+  width: 40rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.add-modal h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.form {
+  font-size: 2rem;
+}
+.name-input,
+.email-input,
+.phone-input {
+  border: 1px solid grey;
+  padding: 5px;
+  width: 30rem;
+  outline: none;
+  font-size: 1.5rem;
+}
+.field {
+  margin: 2rem;
+}
+.form .field label {
+  font-weight: 100;
+}
+.add-btn,
+.cancel-btn {
+  font-size: 1.6rem;
+  padding: 1rem 1rem;
+  background-color: #2185d0;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  width: 15rem;
+}
+.cancel-btn {
+  margin-right: 1rem;
+}
+
+.cancel-x {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2185d0;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+.modal-btn {
+  text-align: left;
+  width: 100%;
+}

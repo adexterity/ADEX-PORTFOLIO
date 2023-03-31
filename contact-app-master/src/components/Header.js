@@ -2,8 +2,11 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="ui fixed menu">
-      <div className="ui container center text-center" style={{ justifyContent: "center" }}>
+    <div className="ui menu">
+      <div
+        className="ui container center text-center"
+        style={{ justifyContent: "center" }}
+      >
         <h2>Contact Manager</h2>
       </div>
     </div>
