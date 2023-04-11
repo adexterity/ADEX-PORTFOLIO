@@ -6,7 +6,7 @@ import "./componentStyle.css";
 const ContactCard = (props) => {
   const { id, name, email, phoneNo } = props.contact;
   return (
-    <tr>
+    <tr key={id}>
       <td>
         <input type="checkbox" />
       </td>

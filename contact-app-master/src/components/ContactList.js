@@ -23,6 +23,9 @@ const ContactList = (props) => {
     });
   return (
     <div className="contact-container">
+      <div>
+        <i className="fa-sharp fa-solid fa-address-book contact-icon"></i>
+      </div>
       <div className="search-add">
         <input
           type="search"

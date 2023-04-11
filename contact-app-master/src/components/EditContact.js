@@ -2,6 +2,7 @@ import React from "react";
 
 class EditContact extends React.Component {
   state = {
+    id: this.props.contact.id,
     name: this.props.contact.name,
     email: this.props.contact.email,
     phoneNo: this.props.contact.phoneNo,
@@ -9,6 +10,7 @@ class EditContact extends React.Component {
 
   update = (e) => {
     e.preventDefault();
+
     if (
       this.state.name === "" &&
       this.state.email === "" &&
@@ -17,7 +19,7 @@ class EditContact extends React.Component {
       alert("please fill in the fields");
       return;
     } else {
-      this.props.updateContactHandler(this.props.contact.id, this.state);
+      this.props.updateContactHandler(this.state.id, this.state);
       this.props.handleCloseModal();
       //set the input field back to empty
       this.setState({ name: "", email: "", phoneNo: "" });
@@ -75,14 +77,10 @@ class EditContact extends React.Component {
                 className="cancel-btn"
                 onClick={this.props.handleCloseModal}
               >
-                Cancel
+                <i className="cancel icon cancel-icon"></i> Cancel
               </button>
-              <button
-                className="add-btn"
-                /*                 onClick={this.props.handleEditContact}
-                 */
-              >
-                Edit Contact
+              <button className="add-btn">
+                <i className="edit icon edit-icon"></i> Edit Contact
               </button>
             </div>
           </form>

@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import AddContact from "./AddContact";
 import EditContact from "./EditContact";
 import ContactList from "./ContactList";
+import Route from "./Route";
 
 const App = () => {
   //since the content of the contacts Array is gditoing to change from time to time, use useState hooks to define the contacts. we use hooks because we're in a functional component.
@@ -67,6 +68,7 @@ const App = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts));
   }, [contacts]);
 
+  console.log(contacts);
   return (
     <div className="ui container">
       <Header />
@@ -77,12 +79,15 @@ const App = () => {
         handleButtonClick={handleButtonClick}
         editContactHandler={editContactHandler}
       />
+
       {showModal && (
         <AddContact
           addContactHandler={addContactHandler}
           handleCloseModal={handleCloseModal}
         />
       )}
+      {/* <Route path="/addcontact"></Route> */}
+
       {showEditModal && (
         <EditContact
           addContactHandler={addContactHandler}

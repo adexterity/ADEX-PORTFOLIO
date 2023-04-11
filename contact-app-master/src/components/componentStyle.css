@@ -12,7 +12,7 @@ body {
 
 /* NAV BAR */
 .nav-bar {
-  background: blue;
+  background: #2185d0;
   position: fixed;
   top: 0;
   left: 0;
@@ -48,6 +48,11 @@ body {
 .contact-container {
   max-width: 70rem;
   margin-top: 50px;
+}
+.contact-icon {
+  font-size: 6rem;
+  color: blue;
+  color: #2185d0;
 }
 .search-add {
   display: flex;
@@ -176,4 +181,19 @@ th {
 .modal-btn {
   text-align: left;
   width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+
+  .table th {
+    font-size: 15px;
+  }
+
+  .icon.trash,
+  .icon.edit {
+    font-size: 10px;
+  }
 }
