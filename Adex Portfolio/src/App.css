@@ -1,3 +1,8 @@
+/* primary color */
+/* #0071f2 */
+/* secondary color */
+/* #2f2e41 */
+
 /* custom font */
 @font-face {
   font-family: Roboto;
@@ -25,6 +30,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
+  font-size: 62.5%;
 }
 
 body {
@@ -153,7 +159,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
+  font-size: 1.8rem;
   opacity: 0.75;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -169,8 +175,8 @@ span.navbar-text {
   margin-left: 14px;
 }
 .social-icon a {
-  width: 42px;
-  height: 42px;
+  width: 4.2rem;
+  height: 4.2rem;
   background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
@@ -182,8 +188,8 @@ span.navbar-text {
 }
 .social-icon a::before {
   content: "";
-  width: 42px;
-  height: 42px;
+  width: 4.2rem;
+  height: 4.2rem;
   position: absolute;
   background-color: #ffffff;
   border-radius: 50%;
@@ -207,7 +213,7 @@ span.navbar-text {
   color: #fff;
   border: 1px solid #fff;
   padding: 18px 34px;
-  font-size: 18px;
+  font-size: 1.8rem;
   margin-left: 18px;
   position: relative;
   background-color: transparent;
@@ -242,7 +248,7 @@ nav.navbar .navbar-toggler:focus {
   box-shadow: none;
 }
 nav.navbar .navbar-toggler-icon {
-  width: 24px;
+  width: 2.4rem;
   height: 17px;
   background-image: none;
   position: relative;
@@ -255,9 +261,9 @@ nav.navbar .navbar-toggler-icon:focus {
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
-  width: 24px;
+  width: 2.4rem;
   position: absolute;
-  height: 2px;
+  height: 0.2rem;
   background-color: #fff;
   top: 0;
   left: 0;
@@ -280,4 +286,57 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 }
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
+}
+
+/* banner */
+.banner {
+  margin-top: 0;
+  padding: 10rem 0;
+  background-image: url("./assets/img/banner-bg.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 0.8rem 1rem;
+  background: linear-gradient(135deg, #9c3cf9 10%, #2f2171 100%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+  display: inline-block;
+}
+.banner h1 {
+  font-size: 6.5rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.banner p {
+  color: #b8b8b8;
+  font-size: 1.8rem;
+  letter-spacing: 0.8px;
+  line-height: 15.5px;
+  width: 96%;
+}
+
+.banner button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.banner button svg {
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
 }

@@ -67,11 +67,11 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
-                <img src={LinkedinLogo} alt="" />
+              <a href="https://www.linkedin.com/in/joseph-suberu-a57528229/">
+                <img src={LinkedinLogo} alt="linkedin logo" />
               </a>
-              <a href="#">
-                <img src={GithubLogo} alt="" />
+              <a href="https://github.com/adexterity">
+                <img src={GithubLogo} alt="github logo" />
               </a>
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
