@@ -12,12 +12,31 @@ export const Contact = () => {
   };
 
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtontext] = useState("send");
+  const [buttonText, setButtonText] = useState("send");
   const [status, setStatus] = useState({});
-  
-const handleSubmit = ()=>{
 
-}
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setButtonText("sending...");
+    let response = await fetch("http://localhost:3000/contact", {
+      method: "POST",
+      header: {
+        "Content-Type": "Application/json: charset=utf-8",
+      },
+      body: JSON.stringify(formDetails),
+    });
+    setButtonText("send");
+    let result = response.json();
+    setFormDetails(formInitialDetails);
+    if (result.code === 200) {
+      setStatus({ success: true, message: "Message sent succesfully" });
+    } else {
+      setStatus({
+        success: false,
+        message: "Something went wrong, please try again later.",
+      });
+    }
+  };
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
@@ -79,14 +98,21 @@ const handleSubmit = ()=>{
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   ></textarea>
-                  <button type="submit" ><span>{buttonText}</span></span></button>
+                  <button type="submit">
+                    <span>{buttonText}</span>
+                  </button>
                 </Col>
-                {
-                    status.message &&
-                    <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                    </Col>
-                }
+                {status.message && (
+                  <Col>
+                    <p
+                      className={
+                        status.success === false ? "danger" : "success"
+                      }
+                    >
+                      {status.message}
+                    </p>
+                  </Col>
+                )}
               </Row>
             </form>
           </Col>
