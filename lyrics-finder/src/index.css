@@ -9,6 +9,6 @@ body{
 }
 
 .container{
-  @apply w-[200px] mx-auto;
+  @apply w-[1000px] mx-auto;
 }
 
