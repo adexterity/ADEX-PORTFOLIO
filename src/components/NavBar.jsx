@@ -34,6 +34,16 @@ export const NavBar = () => {
     console.log(`${link} clicked`);
     setActiveLink(link);
   };
+  const scrollToSection = () => {
+    // Find the target section by its ID
+    const targetSection = document.getElementById("contact");
+  
+    // Scroll to the target section
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };  
+  
   return (
     <Navbar expand="lg" className={`${scrolled ? "scrolled" : ""} ${isNavbarOpen ? "dark" : ""}`}>
       <Container>
@@ -85,7 +95,7 @@ export const NavBar = () => {
                 <img src={GithubLogo} alt="github logo" />
               </a>
             </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
+            <button className="vvd" onClick={scrollToSection}>
               <span>let's connect</span>
             </button>
           </span>

@@ -10,19 +10,22 @@ import projImg3 from "../assets/img/project-img3.png";
 export const Projects = () => {
   const projects = [
     {
-      title: "Contact App",
+      title: "Quizzy",
       description: "this app is build to master CRUD implementation in React",
       imgUrl: projImg1,
+      url: 'https://quizzy-app-liard.vercel.app/'
     },
     {
-      title: "Contact App",
+      title: "Movie App",
       description: "this app is build to master CRUD implementation in React",
       imgUrl: projImg2,
+      url: 'https://adexterity-movieapp.vercel.app/'
     },
     {
-      title: "Contact App",
+      title: "Farm Fresh",
       description: "this app is build to master CRUD implementation in React",
       imgUrl:projImg3,
+      url: 'https://farm-fresh-six.vercel.app/'
     }
   ];
   console.log(projects.num);
@@ -62,8 +65,8 @@ export const Projects = () => {
                     })}
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey="second">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, voluptatum!</Tab.Pane>
-                <Tab.Pane eventKey="third">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, labore.</Tab.Pane>
+               {/*  <Tab.Pane eventKey="second">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, voluptatum!</Tab.Pane>
+                <Tab.Pane eventKey="third">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, labore.</Tab.Pane> */}
               </Tab.Content>
             </Tab.Container>
           </Col>
