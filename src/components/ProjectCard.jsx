@@ -6,7 +6,7 @@ export const ProjectCard = ({ title, description, imgUrl, url }) => {
 
   return (
     <Col size={12} sm={6} md={4}>
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <a href={url} target="_blank" rel="noopener noreferrer" style={{color: 'white'}}>
         <div className="proj-imgbx ">
           <img src={imgUrl} alt="projects card" />
           <div className="proj-txtx">

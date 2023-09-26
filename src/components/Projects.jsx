@@ -11,19 +11,19 @@ export const Projects = () => {
   const projects = [
     {
       title: "Quizzy",
-      description: "this app is build to master CRUD implementation in React",
+      description: "quizzy app is an application build with react. it is a question and answer application to test your mastery of any category in programming ",
       imgUrl: projImg1,
       url: 'https://quizzy-app-liard.vercel.app/'
     },
     {
       title: "Movie App",
-      description: "this app is build to master CRUD implementation in React",
+      description: "This app is built with React, React-Router. it uses the TMDB api to generate movies. you can also search for your desired movies. it also has a favourite functionality where you can add movies to favourite",
       imgUrl: projImg2,
       url: 'https://adexterity-movieapp.vercel.app/'
     },
     {
       title: "Farm Fresh",
-      description: "this app is build to master CRUD implementation in React",
+      description: "this app is built with Vue. it is an application that showcases farm produce to increase the sales of farmers.",
       imgUrl:projImg3,
       url: 'https://farm-fresh-six.vercel.app/'
     }
