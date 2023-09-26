@@ -36,10 +36,7 @@ export const Projects = () => {
           <Col size={12}>
             <h2> Projects </h2>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s. when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+            Explore my portfolio of diverse projects. As a frontend developer, I've had the privilege of working on a range of exciting ventures. These projects showcase my skills in web development, design, and creating exceptional user experiences. Take a closer look at what I've crafted, and feel free to reach out for more details or inquiries.
             </p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
