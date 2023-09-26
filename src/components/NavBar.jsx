@@ -9,6 +9,9 @@ import GithubLogo from "../assets/img/github.svg";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false); // Track Navbar open state
+
+  
 
   useEffect(() => {
     const onScroll = () => {
@@ -22,12 +25,17 @@ export const NavBar = () => {
     return () => window.removeEventListener("scroll", onscroll);
   }, []);
 
+  // Function to toggle Navbar open state
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
+
   const onUpdateActiveLink = (link) => {
     console.log(`${link} clicked`);
     setActiveLink(link);
   };
   return (
-    <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+    <Navbar expand="lg" className={`${scrolled ? "scrolled" : ""} ${isNavbarOpen ? "dark" : ""}`}>
       <Container>
         <Navbar.Brand href="#home">
           {/* <img src={Logo} alt="logo" /> */}
@@ -35,7 +43,7 @@ export const NavBar = () => {
 
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <Navbar.Toggle  onClick={toggleNavbar} aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
