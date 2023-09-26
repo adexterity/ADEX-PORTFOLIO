@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import Logo from "../assets/img/logo.svg";
 import LinkedinLogo from "../assets/img/linkedin.svg";
 import GithubLogo from "../assets/img/github.svg";
 
@@ -36,7 +35,7 @@ export const NavBar = () => {
   };
   const scrollToSection = () => {
     // Find the target section by its ID
-    const targetSection = document.getElementById("contact");
+    const targetSection = document.getElementById("connect");
   
     // Scroll to the target section
     if (targetSection) {

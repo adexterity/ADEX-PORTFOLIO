@@ -36,8 +36,7 @@ export const Banner = () => {
               </span>
             </h1>
             <p>
-              This is some dummy placehoder text. it is used as a dummy to fill
-              some part of my portfolio website and it is meant to look good.
+            I'm a Frontend Developer specializing in creating exceptional digital experiences. Explore my portfolio to see my work and expertise. If you have a project in mind, let's connect and bring your ideas to life.
             </p>
             <button onClick={scrollToSection}>
               Let's Connect <ArrowRightCircle />
