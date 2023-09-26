@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Logo from "../assets/img/logo.svg";
+// import Logo from "../assets/img/logo.svg";
 import LinkedinLogo from "../assets/img/linkedin.svg";
 import GithubLogo from "../assets/img/github.svg";
 
@@ -30,8 +30,11 @@ export const NavBar = () => {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={Logo} alt="logo" />
+          {/* <img src={Logo} alt="logo" /> */}
+          <a href="/#" style={{color: 'white', fontSize: '28px', fontWeight: '700', textDecoration: 'none', marginBottom: '25px', display: 'inline-block'}}>Adex S.</a>
+
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
